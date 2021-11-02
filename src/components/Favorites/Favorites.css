@@ -15,6 +15,12 @@
 
 .favorites__list {
     margin-bottom: 24px;
+    align-items: center;
+    
+}
+.favorist__list li{
+    border: 1 px solid grey;
+    margin-bottom: 10px;
 }
 
 .favorites__save {
@@ -30,4 +36,15 @@
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.2s linear;
+}
+.X{
+    width: 100px;
+    padding: 1px;
+    border-radius: 50px;
+    border: 0.3px solid black;
+    text-align: center;
+}
+.disable{
+    background: #000;
+    pointer-events: none;
 }

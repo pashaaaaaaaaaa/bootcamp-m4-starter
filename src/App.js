@@ -7,11 +7,21 @@ import './reset.css';
 import './common.css';
 
 class App extends React.Component {
+  state={
+    key:''
+  }
+  functionCallBack=(element)=>{
+      this.setState({
+        key:element
+      })
+  }
+
   render() {
     return (
       <div className="app">
-        <Route path="/" exact component={MainPage} />
-        <Route path="/list/:id" exact component={ListPage} />
+        <Route path="/" exact ><MainPage functionCallBack={this.functionCallBack}/></Route>
+        <Route path="/list" exact ><ListPage newKey={this.state.key}/></Route> 
+        
       </div>
     );
   }
